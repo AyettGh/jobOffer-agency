@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agency List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Agency List</h1>
+
+    <a th:href="@{/agencies/new}" class="btn btn-primary mb-3">Add New Agency</a>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Company Name</th>
+            <th>Contact Person</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="agency : ${agencies}">
+            <td th:text="${agency.companyName}">Example Corp</td>
+            <td th:text="${agency.contactPerson}">John Doe</td>
+            <td th:text="${agency.email}">example@example.com</td>
+            <td th:text="${agency.number}">123456789</td>
+            <td>
+                <a th:href="@{/agencies/edit/{id}(id=${agency.id})}" class="btn btn-sm btn-info">Edit</a>
+                <a th:href="@{/agencies/delete/{id}(id=${agency.id})}" class="btn btn-sm btn-danger"
+                   onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>New Application Received</title>
+</head>
+<body>
+<h1>New Application Received</h1>
+<p>A new application has been submitted:</p>
+<ul>
+    <li>Client: <span th:text="${clientName}"></span></li>
+    <li>Offer: <span th:text="${offerTitle}"></span></li>
+    <li>Application ID: <span th:text="${applicationId}"></span></li>
+</ul>
+<p>Please review this application at your earliest convenience.</p>
+</body>
+</html>

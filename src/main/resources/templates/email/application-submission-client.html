@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Application Submitted</title>
+</head>
+<body>
+<h1>Your Application Has Been Submitted</h1>
+<p>Dear <span th:text="${name}">User</span>,</p>
+<p>Thank you for applying for the position: <strong th:text="${offerTitle}"></strong>.</p>
+<p>Your application ID is: <strong th:text="${applicationId}"></strong></p>
+<p>We will review your application and get back to you soon.</p>
+<p>Best regards,<br>The Recruitment Team</p>
+</body>
+</html>
